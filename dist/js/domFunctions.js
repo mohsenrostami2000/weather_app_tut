@@ -1,9 +1,9 @@
-export const setPlaceholderText = () => {
+/* export const setPlaceholderText = () => {
   const input = document.getElementById("searchBar__text");
   window.innerWidth < 400
     ? (input.placeholder = "City, State, Country")
     : (input.placeholder = "City, State, Country, or Zip Code");
-};
+}; */
 
 export const addSpinner = (element) => {
   animateButton(element);
@@ -16,7 +16,7 @@ const animateButton = (element) => {
   element.nextElementSibling.classList.toggle("none");
 };
 
-export const displayError = (headerMsg, srMsg) => {
+/* export const displayError = (headerMsg, srMsg) => {
   updateWeatherLocationHeader(headerMsg);
   updateScreenReaderConfirmation(srMsg);
 };
@@ -331,4 +331,4 @@ const displayDailyForecast = (dfArray) => {
     "dailyForecast__contents"
   );
   dailyForecastContainer.appendChild(dayDiv);
-};
+}; */

@@ -1,4 +1,4 @@
-export const setLocationObject = (locationObj, coordsObj) => {
+/* export const setLocationObject = (locationObj, coordsObj) => {
   const { lat, lon, name, unit } = coordsObj;
   locationObj.setLat(lat);
   locationObj.setLon(lon);
@@ -13,7 +13,7 @@ export const getHomeLocation = () => {
 };
 
 export const getWeatherFromCoords = async (locationObj) => {
-  /* const lat = locationObj.getLat();
+  const lat = locationObj.getLat();
   const lon = locationObj.getLon();
   const units = locationObj.getUnit();
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${WEATHER_API_KEY}`;
@@ -23,7 +23,7 @@ export const getWeatherFromCoords = async (locationObj) => {
     return weatherJson;
   } catch (err) {
     console.error(err);
-  } */
+  }
 
   const urlDataObj = {
     lat: locationObj.getLat(),
@@ -43,7 +43,7 @@ export const getWeatherFromCoords = async (locationObj) => {
 };
 
 export const getCoordsFromApi = async (entryText, units) => {
-  /* const regex = /^\d+$/g;
+  const regex = /^\d+$/g;
   const flag = regex.test(entryText) ? "zip" : "q";
   const url = `https://api.openweathermap.org/data/2.5/weather?${flag}=${entryText}&units=${units}&appid=${WEATHER_API_KEY}`;
   const encodedUrl = encodeURI(url);
@@ -53,7 +53,7 @@ export const getCoordsFromApi = async (entryText, units) => {
     return jsonData;
   } catch (err) {
     console.error(err.stack);
-  } */
+  }
 
   const urlDataObj = {
     text: entryText,
@@ -76,3 +76,4 @@ export const cleanText = (text) => {
   const entryText = text.replaceAll(regex, " ").trim();
   return entryText;
 };
+ */
